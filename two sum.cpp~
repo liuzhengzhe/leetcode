@@ -1,0 +1,26 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int> &numbers, int target) {
+        int flag=0;
+        int one;
+        int two;
+        for (int i=0;i<numbers.size();i++){
+            for (int j=0;j<numbers.size();i++){
+                if (i==j){
+                    continue;
+                }
+                if(i+j==target){
+                    flag=1;
+                    one=i;
+                    two=j;
+                    break;
+                }
+            }
+            if(flag==1){
+                break;
+            }
+        }
+        vector<int> ret(one,two);
+        return ret;
+    }
+};
